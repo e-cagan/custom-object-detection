@@ -89,10 +89,4 @@ Actual performance varies with hardware and settings.
 - Dataset source: [Roboflow Items Dataset](https://universe.roboflow.com/study-group/items-balno?utm_source=chatgpt.com)
 
 ---
-
-Usage examples, hyperparameters, or inference images can be added if needed.
-├── detect.py      # Gerçek zamanlı çıkarım (webcam/video)
-├── requirements.txt
-├── .gitignore
-└── README.md
 ```
