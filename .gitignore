@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs & Caches
+*.log
+*.out
+*.err
+*.DS_Store
+*.cache/
+.cache
+wandb/
+
+# PyTorch / Training Artifacts
+*.pth
+*.pt
+*.onnx
+*.ckpt
+
+# YOLOv8 Training Outputs
+runs/
+weights/
+labels.cache
+
+# Data (optional - keep if dataset is huge)
+datasets/
+*.zip
+*.tar
+*.rar
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
