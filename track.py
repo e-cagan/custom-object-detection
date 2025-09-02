@@ -22,13 +22,15 @@ while cap.isOpened():
         print("Couldn't open camera.")
         break
 
-    results = model.predict(
+    results = model.track(
         frame,
-        imgsz=512,
+        imgsz=640,
         conf=0.20,
-        iou=0.45, # Intersection over union (kutu çakışmalarını kontrol eder)
+        iou=0.65,
         device=device,
-        half=True, # FP16 Precision usage for accelaration
+        half=True,                     # False if working with CPU
+        tracker="trackers/bytetrack.yaml",  # or "trackers/botsort.yaml"
+        persist=True,                  # takip için durumun korunması şart
         verbose=False
     )
 
@@ -40,7 +42,7 @@ while cap.isOpened():
     prev = now
     cv2.putText(annotated, f"FPS: {fps:.1f}", (10, 30),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-    cv2.imshow("YOLO Object Detection", annotated)
+    cv2.imshow("YOLO Object Tracking", annotated)
 
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
